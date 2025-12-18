@@ -1,26 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './login';
 import Browse from './browse';
 
 
-const Body = () => {
 
+
+const Body = () => {
     var appRouter = createBrowserRouter([
         {
-            path:"/",
-            element:<Login/>
+            path: "/",
+            element: <Login />
         },
         {
-            path:"/browse",
-            element:<Browse/>
+            path: "/browse",
+            element: <Browse />
         },
     ]);
-  return (
-    <div>
-        <RouterProvider router={appRouter}/>
-    </div>
-  )
+
+
+
+    return (
+        <div>
+            <RouterProvider router={appRouter} />
+        </div>
+    )
 }
 
 export default Body
