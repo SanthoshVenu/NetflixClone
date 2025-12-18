@@ -50,13 +50,13 @@ const Header = () => {
 return (
     <div className='w-screen bg-gradient-to-b from-black'>
         <div>
-            <img className='absolute z-10 left-5 h-11 ' src={NETFLIX_LOGO} alt="Netflix Logo" style={{ width: '120px' }} />
+            <img className='absolute z-10 left-5 h-11 w-screen m-4' src={NETFLIX_LOGO} alt="Netflix Logo" style={{ width: '120px' }} />
             {!user && <img className='absolute inset-0 h-full w-full object-cover' src={BG_IMAGE} />}
         </div>
 
         <div className='flex'>
             <img className='absolute right-5 w-10' src={user?.photoURL || MY_IMAGE} ></img>
-            <button className='absolute right-5 top-20' onClick={handleSignOut}>Sign Out</button>
+            <button className='absolute right-5 top-20 text-white' onClick={handleSignOut}>Sign Out</button>
         </div>
     </div>
 )
